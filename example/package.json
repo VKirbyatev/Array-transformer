@@ -1,0 +1,15 @@
+{
+  "name": "array-transform-example",
+  "version": "1.0.0",
+  "description": "Usage example of my test project array-transformer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js"
+  },
+  "author": "Vladislav Kirbiatev",
+  "license": "ISC",
+  "dependencies": {
+    "@kirbiatev/array-transformer": "0.0.1"
+  }
+}
