@@ -18,5 +18,5 @@ tests.forEach(async (element) => {
   const result = await transformToString(element);
   const stringifiedArray = JSON.stringify(element);
 
-  console.log(`${stringifiedArray} -> ${result}`);
+  console.log(`${stringifiedArray} -> "${result}"`);
 });

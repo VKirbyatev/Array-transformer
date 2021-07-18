@@ -10,6 +10,6 @@
   "author": "Vladislav Kirbiatev",
   "license": "ISC",
   "dependencies": {
-    "@kirbiatev/array-transformer": "0.0.1"
+    "@kirbiatev/array-transformer": "^0.0.2"
   }
 }
