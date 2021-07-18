@@ -14,4 +14,9 @@ const tests = [
   [1, 3, 5, 7, 9, 11],
 ];
 
-console.log(transformToString());
+tests.forEach(async (element) => {
+  const result = await transformToString(element);
+  const stringifiedArray = JSON.stringify(element);
+
+  console.log(`${stringifiedArray} -> ${result}`);
+});
