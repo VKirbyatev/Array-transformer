@@ -1,6 +1,8 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-plusplus */
 
+export const validateValue = (symbol) => !Number.isNaN(Number(symbol));
+
 export const isSequent = (c, n) => ++c === n;
 
 export const getBlock = (currentBlock, value) => {
@@ -55,6 +57,10 @@ const stringifyArray = (inputArray) => {
   const serializedBlocks = [];
 
   inputArray.forEach((value, index) => {
+    if (!validateValue(value)) {
+      throw Error('Only numbers allowed');
+    }
+
     const nextBlock = getBlock(currBlock, value);
     if (currBlock && currBlock !== nextBlock) {
       serializedBlocks.push(stringifyBlock(currBlock));
