@@ -3,6 +3,8 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-plusplus */
 
+const validateValue = (symbol) => !Number.isNaN(Number(symbol));
+
 const isSequent = (c, n) => ++c === n;
 
 const getBlock = (currentBlock, value) => {
@@ -57,6 +59,10 @@ const stringifyArray = (inputArray) => {
   const serializedBlocks = [];
 
   inputArray.forEach((value, index) => {
+    if (!validateValue(value)) {
+      throw Error('Only numbers allowed');
+    }
+
     const nextBlock = getBlock(currBlock, value);
     if (currBlock && currBlock !== nextBlock) {
       serializedBlocks.push(stringifyBlock(currBlock));
@@ -81,5 +87,9 @@ const transformToString = (array) =>
     }
   });
 
+exports.getBlock = getBlock;
+exports.isSequent = isSequent;
+exports.stringifyBlock = stringifyBlock;
 exports.transformToString = transformToString;
+exports.validateValue = validateValue;
 //# sourceMappingURL=index.cjs.map
