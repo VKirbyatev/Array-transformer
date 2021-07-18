@@ -1,9 +1,9 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-plusplus */
 
-const isSequent = (c, n) => ++c === n;
+export const isSequent = (c, n) => ++c === n;
 
-const getBlock = (currentBlock, value) => {
+export const getBlock = (currentBlock, value) => {
   if (!currentBlock) {
     return {
       from: value,
@@ -22,7 +22,7 @@ const getBlock = (currentBlock, value) => {
   };
 };
 
-const stringifyBlock = (block) => {
+export const stringifyBlock = (block) => {
   if (!block) {
     return '';
   }

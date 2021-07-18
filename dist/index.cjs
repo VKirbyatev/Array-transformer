@@ -81,5 +81,8 @@ const transformToString = (array) =>
     }
   });
 
+exports.getBlock = getBlock;
+exports.isSequent = isSequent;
+exports.stringifyBlock = stringifyBlock;
 exports.transformToString = transformToString;
 //# sourceMappingURL=index.cjs.map
